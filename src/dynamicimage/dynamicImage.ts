@@ -68,7 +68,11 @@ export interface DynamicImageAnimations {
 
     enable(){ if(!this.system.active){ engine.addSystem(this.system) }}
     disable(){ if(this.system.active){ engine.removeSystem(this.system) }}
-    hide(){ this.image.visible = false }
+    hide(){
+        log(this.image)
+         this.image.visible = false
+         log(this.image)
+        }
     show(){ this.image.visible = true }
 
     checkIsAnimating(): boolean {
